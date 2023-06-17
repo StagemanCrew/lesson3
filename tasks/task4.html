@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-4</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).</h1>
+
+    <script>
+        // 1. Вводимо дані
+        let yourBirth = parseInt(prompt('Скiльки вам рокiв?'));
+        let kind = 7;
+        let schoolboy = 18;
+        let student = 24;
+        let worker = 59;
+        let pensioner = 60;
+
+        //2.Знаходимо та Виводимо результат
+        if (yourBirth <= kind){
+            document.write(`<h2> Ви ще дитина!!! <h2/>`);
+        }else if (yourBirth <= schoolboy){
+            document.write(`<h2> Ви школяр!!! <h2/>`);
+        }else if (yourBirth <= student){
+            document.write(`<h2> Ви студент!!! <h2/>`);
+        }else if (yourBirth <= worker){
+            document.write(`<h2> Ви працівник!!! <h2/>`);
+        }else document.write(`<h2> Ви вже пенсіонер!!! <h2/>`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-7</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься.</h1>
+
+    <script>
+        // 1. Вводимо дані
+        let monthNumber = parseInt(prompt("Введіть номер місяця!"));
+      
+        // Перевірка номеру місяця
+        if (monthNumber >= 1 && monthNumber <= 12) {
+          // Визначення пори року за номером місяця
+          let season;
+          if (monthNumber >= 3 && monthNumber <= 5) {
+            season = "весни";
+          } else if (monthNumber >= 6 && monthNumber <= 8) {
+            season = "літа";
+          } else if (monthNumber >= 9 && monthNumber <= 11) {
+            season = "осені";
+          } else {
+            season = "зими";
+          }
+      
+          // Виведення результату
+          document.write("<h2>Місяць номер " + monthNumber + " належить до " + season + ".</h2>");
+        } else {
+          document.write("<h2>Некоректний номер місяця. Будь ласка, введіть число від 1 до 12.</h2>");
+        }
+    </script>
+
+</body>
+</html>

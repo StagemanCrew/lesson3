@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-6</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</h1>
+
+    <script>
+        // 1. Вводимо дані
+        let valueDay = parseInt(prompt('Введiть номер дня тижня!'));
+        let monday = 1;
+        let tuesday = 2;
+        let wednesday = 3;
+        let thursday = 4;
+        let friday = 5;
+        let saturday = 6;
+        let sunday = 7;
+
+        //2.Знаходимо та Виводимо результат
+        if (valueDay === monday){
+            document.write(`<h2> Це Monday!!! <h2/>`);
+        } else if (valueDay === tuesday){
+            document.write(`<h2> Це Tuesday!!! <h2/>`);
+        } else if (valueDay === wednesday){
+            document.write(`<h2> Це Wednesday!!! <h2/>`);
+        } else if (valueDay === thursday){
+            document.write(`<h2> Це Thursday!!! <h2/>`);
+        } else if (valueDay === friday){
+            document.write(`<h2> Це Friday!!! <h2/>`);
+        } else if (valueDay === saturday){
+            document.write(`<h2> Це Saturday!!! <h2/>`);
+        } else document.write(`<h2> Це Sunday!!! <h2/>`);
+
+    </script>
+</body>
+</html>
