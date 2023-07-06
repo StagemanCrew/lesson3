@@ -17,19 +17,19 @@
           // Визначення пори року за номером місяця
           let season;
           if (monthNumber >= 3 && monthNumber <= 5) {
-            season = "весни";
+            season = "Весни";
           } else if (monthNumber >= 6 && monthNumber <= 8) {
-            season = "літа";
+            season = "Літа";
           } else if (monthNumber >= 9 && monthNumber <= 11) {
-            season = "осені";
+            season = "Осені";
           } else {
-            season = "зими";
+            season = "Зими";
           }
       
           // Виведення результату
-          document.write("<h2>Місяць номер " + monthNumber + " належить до " + season + ".</h2>");
+          document.write(`<h2> Місяць номер ${monthNumber} належить до  ${season}. </h2>`);
         } else {
-          document.write("<h2>Некоректний номер місяця. Будь ласка, введіть число від 1 до 12.</h2>");
+          document.write(`<h2> Некоректний номер місяця. Будь ласка, введіть число від 1 до 12. </h2>`);
         }
     </script>
 

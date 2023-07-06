@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-8</title>
+</head>
+<body>
+    <h1>На екран виводиться меню: <br>
+        1. Веселий <br>
+        2. Сумний <br>
+        3. Обурений <br>
+        Користувач вводить номер пункту меню і на екрані з’являється відповідне зображення смайла
+        </h1>
+
+    <script>
+        //1.Вводимо даннi
+        let userChoice = parseInt(prompt('Зробіть вибір!, 1-Веселий, 2-Сумний, 3-Обурений','1, 2 або 3'))
+
+        //2.Знаходимо результат
+        if (userChoice === 1)
+            document.write(`<img src="../img/1.png" style="width: 250px;">`)
+        else if (userChoice === 2)
+            document.write(`<img src="../img/2.png" style="width: 250px;">`)
+        else if (userChoice === 3)
+            document.write(`<img src="../img/3.png" style="width: 250px;">`)
+        else 
+            document.write(`<h2>Я просив вибирать з 3 варіантів</h2> <img src="../img/img.png" style="width: 250px;">`)
+        //3.Виводимо результат
+
+    </script>
+
+</body>
+</html>

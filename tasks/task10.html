@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-10</title>
+</head>
+<body>
+    <h1>Комп’ютер загадує число від 1 до 10. Двоє користувачів надають свої відповіді. Виграє той, у кого число знаходиться ближче до загаданого комп’ютером числа</h1>
+
+    <script>
+        //1.Вводимо даннi
+        let rundomNum = parseInt(1 + Math.floor(Math.random() * 10));
+        //console.log(rundomNum);
+
+        //2.Знаходимо результат
+        let firstUserNum = parseInt(prompt('Перший ігрок, Введіть число від 1 до 10'));
+        let secondUserNum = parseInt(prompt('Другий ігрок, Введіть число від 1 до 10'));
+        // Визначення різниці між відповідями
+        let firstUserNumDif = Math.abs(firstUserNum - rundomNum);
+        let secondUserNumDif = Math.abs(secondUserNum - rundomNum);
+
+        if (firstUserNumDif < secondUserNumDif || firstUserNum === rundomNum) {
+            document.write(`<h2> Перший ігрок виграв! <h2/>`);
+        } else if (firstUserNumDif > secondUserNumDif || secondUserNum === rundomNum)
+            document.write(`<h2> Другий ігрок виграв! <h2/>`);
+        else 
+            document.write(`<h2> Нічия! Обидва користувачі знаходяться на однаковій відстані до загаданого числа! <h2/>`);
+    </script>
+</body>
+</html>

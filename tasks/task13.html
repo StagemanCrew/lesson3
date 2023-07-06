@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-13</title>
+</head>
+<body>
+    <h1>Полювання. Заєць знаходиться у верхньому лівому кутку поля. Поле складається з двох рядків і двох стовпців. За один крок заєць може стрибнути у будь-яку із вільних клітинок. Користувач ставить пастку вказуючи номер рядка і стовпця клітинки. Якщо заєць потрапляє у пастку, то користувач виграв і отримав 100 балів. Якщо користувач зловить зайця за другою спробою, то одержує 50 балів.</h1>
+
+    <script>
+
+        // 1. Вводимо дані
+        let rowNumber = 2;
+        let columnNumber = 2;
+        let trapsQuantity = 2;
+
+        // 2. Знаходимо результат
+        let rabbitRowPosition = 1;
+        let rabbitColumnPosition = 1;
+
+        let userTrapRow, userTrapColumn, checkTrapResult;
+
+        let attempts = 0;
+        do {
+            userTrapRow = parseInt(prompt('Введіть номер рядка.'));
+            userTrapColumn = parseInt(prompt('Введіть номер стовпця.'));
+
+            rabbitRowPosition += Math.random() < 0.5 && rabbitRowPosition < rowNumber ? 1 : 0;
+            rabbitColumnPosition += Math.random() < 0.5 && rabbitColumnPosition < columnNumber ? 1 : 0;
+
+            trapsQuantity--;
+            checkTrapResult = userTrapRow === rabbitRowPosition && userTrapColumn === rabbitColumnPosition;
+            attempts++;
+
+            if (!checkTrapResult && trapsQuantity > 0) {
+                alert(`Не попався. ${rabbitRowPosition} рядок, ${rabbitColumnPosition} стовпець`);
+            }
+
+        } while (!checkTrapResult && trapsQuantity > 0);
+
+            if (checkTrapResult) {
+                if (attempts === 1) {
+                    alert('Ви перемогли! Отримано 100 балів.');
+                } else {
+                    alert('Ви перемогли! Отримано 50 балів.');
+                }
+            } else {
+                alert('Програш');
+        }
+
+
+
+    </script>
+</body>
+</html>

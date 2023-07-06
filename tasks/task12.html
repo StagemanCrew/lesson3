@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-12</title>
+</head>
+<body>
+    <h1>Модифікувати попередню задачу з можливістю після пострілу переміщення корабля у випадковим чином вибрану сусідню клітинку (якщо звичайно корабель не було потоплено за першим разом).</h1>
+
+    <script>
+
+        let rowNumber = parseInt(prompt('Введіть кількість рядків.'));
+        let bulletsNumber = 2;
+
+        let shipPosition = 1 + Math.floor(Math.random() * rowNumber);
+        console.log(shipPosition)
+
+        let userRowNum;
+        do {
+            userRowNum = parseInt(prompt('Введіть номер рядка.'));
+            bulletsNumber--;
+
+            if (userRowNum === shipPosition) {
+                alert('Перемога!');
+                break;
+            } else if (userRowNum === shipPosition - 1 || userRowNum === shipPosition + 1) {
+                alert('Промазав, але Поранив!');
+                shipPosition += Math.random() < 0.5 ? -1 : 1; // Випадкове переміщення корабля
+                console.log(shipPosition)
+            } else {
+                alert('Промазав!');
+                shipPosition += Math.random() < 0.5 ? -1 : 1;
+                console.log(shipPosition)
+            }
+        } while (bulletsNumber > 0);
+
+        if (userRowNum !== shipPosition && bulletsNumber === 0) {
+            alert('Програш');
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>task-9</title>
+</head>
+<body>
+    <h1>Комп’ютер випадковим чином вибирає початок і кінець проміжку (проміжок повинен знаходитися в межах від 1 до 100). Користувач вводить число і виграє, якщо число знаходиться у цьому проміжку, або розташоване від нього (від лівого або правого краю) не більше ніж на 10.</h1>
+
+
+    <script>
+        //1.Вводимо даннi
+        let rundomNumStart = parseInt(1 + Math.floor(Math.random() * 100));
+        let rundomNumFinish = parseInt((rundomNumStart + 1) + Math.floor(Math.random() * (100 - rundomNumStart)));
+        
+        // console.log(rundomNumStart);
+        // console.log(rundomNumFinish);
+
+        //2.Знаходимо результат
+        let userNum = parseInt(prompt('Введіть число від 1 до 100'));
+            if (userNum >= (rundomNumStart) && userNum <= (rundomNumFinish)) {
+                document.write(`<h2>Молодець, вгадав!</h2>`);
+            }else if (userNum >= (rundomNumStart - 11) && userNum <= (rundomNumFinish + 11)) {
+                document.write(`<h2>Ви дуже близькі!</h2>`);
+            } else {
+                document.write(`<h2>Не вгадав!</h2>`);
+            }
+    </script>
+
+</body>
+</html>

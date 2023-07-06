@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-11</title>
+</head>
+<body>
+    <h1>Морський бій. Ворожий корабель, може знаходитись в одному із квадратів (кількість квадратів вводиться з клавіатури), які розташовані лінійно (один за одним) на річці. Позиція корабля визначається комп’ютером випадковим чином.
+        Гра відбувається за правилами: <br>
+        1) якщо користувач стріляє у заданий квадрат (тобто вводиться номер квадрата), то корабель потоплено; <br>
+        2) якщо корабель знаходиться у сусідньому по відношенню до квадрата, де знаходиться корабель, то корабель пошкоджено (про це повідомляємо користувача). <br>
+        За два постріли спробувати потопити корабель.</h1>
+
+    <script>
+        let rowNumber = parseInt(prompt('Введіть кількість рядків.'));
+        let bulletsNumber = 2;
+
+        let shipPosition = 1 + Math.floor(Math.random() * rowNumber)
+
+        let userRowNum;
+        do {
+            userRowNum = parseInt(prompt('Введіть номер рядка.'))
+            bulletsNumber--
+
+            if (userRowNum === shipPosition){
+                alert('Перемога!')
+                break;
+            } else if (userRowNum === shipPosition - 1 || userRowNum === shipPosition + 1)
+                alert('Поранив!')
+
+        } while (bulletsNumber > 0);
+
+        if (userRowNum !== shipPosition && bulletsNumber === 0) {
+            alert('Програш');
+        }
+
+    </script>
+</body>
+</html>

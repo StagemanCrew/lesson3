@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-16</title>
+</head>
+<body>
+    <h1>З клавіатури вводиться перша літера розширення файлу («html», «doc», «jpeg», «mp3», «xls»). Вивести на екран назву програми, яка може відкрити цей тип файлу.</h1>
+
+    <script>
+        //1. Вводимо даннi
+        const programTitle = prompt('Введіть першу літеру типу файла: html, doc, jpeg, mp3, xls').toLowerCase();
+
+        //2. Знаходимо результат
+        let result;
+        switch (programTitle) {
+            case "h": result = 'Google Chrom'
+                break;
+            case "d": result = 'Word'
+                break;
+            case "j": result = 'Просмотр фото Windows'
+                break;
+            case "m": result = 'Aimp3'
+                break;
+            case "x": result = 'Excel'
+                break;
+            default: result = 'Не знаю такого розширення файлу:) '
+                break;
+        }
+
+        //3. Виводимо результат
+        document.write(`<h2>Цей файл можно відкрити за допомогою: ${result}.</h2>`)
+
+    </script>
+</body>
+</html>

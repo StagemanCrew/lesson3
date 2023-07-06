@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-14</title>
+</head>
+<body>
+    <h1>Гра в кості. Правила гри: <br>
+        1) користувач може кинути кості не більше двох разів (користувач сам вирішує чи робити, чи не робити другий кидок); <br>
+        2) якщо випадає парне число, то кількість балів збільшується на це число; <br>
+        3) якщо випадає непарне число, то кількість балів зменшується на це число; <br>
+        4) виграє той, у кого кількість балів більша.</h1>
+
+    <script>
+
+        let userScore = 0; // початковий бал користувача
+        let computerScore = 0; // початковий бал комп'ютера
+
+        // Кидок першої кості користувачем
+        let userDice1 = Math.floor(Math.random() * 6) + 1;
+        if (userDice1 % 2 === 0) {
+        userScore += userDice1;
+        } else {
+        userScore -= userDice1;
+        }
+
+        // Кидок другої кості користувачем
+        let userDice2 = Math.floor(Math.random() * 6) + 1;
+        if (userDice2 % 2 === 0) {
+        userScore += userDice2;
+        } else {
+        userScore -= userDice2;
+        }
+
+        // Кидок першої кості комп'ютером
+        let computerDice1 = Math.floor(Math.random() * 6) + 1;
+        if (computerDice1 % 2 === 0) {
+        computerScore += computerDice1;
+        } else {
+        computerScore -= computerDice1;
+        }
+
+        // Кидок другої кості комп'ютером
+        let computerDice2 = Math.floor(Math.random() * 6) + 1;
+        if (computerDice2 % 2 === 0) {
+        computerScore += computerDice2;
+        } else {
+        computerScore -= computerDice2;
+        }
+
+        // Виведення результатів
+        document.write("Кидок користувача: " + userDice1 + ", " + userDice2 + "<br>");
+        document.write("Кидок комп'ютера: " + computerDice1 + ", " + computerDice2 + "<br>");
+        document.write("Бали користувача: " + userScore + "<br>");
+        document.write("Бали комп'ютера: " + computerScore + "<br>");
+
+        if (userScore > computerScore) {
+        document.write("Користувач переміг!");
+        } else if (userScore < computerScore) {
+        document.write("Комп'ютер переміг!");
+        } else {
+        document.write("Гра закінчилась внічию.");
+        }
+
+    </script>
+</body>
+</html>
